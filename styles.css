@@ -1,0 +1,218 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "League Spartan", sans-serif;
+  background: url(./images/bg-pattern-top-mobile.svg),
+    url(./images/bg-pattern-bottom-mobile.svg);
+  background-position: top left, bottom right;
+  background-repeat: no-repeat;
+}
+
+
+footer{
+    margin-top: 20px;
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 20px auto;
+}
+
+header {
+    margin: 30px auto;
+}
+
+header h1 {
+    margin: 80px 64px 30px 64px;
+    text-align: center;
+    color: hsl(300, 43%, 22%);
+    
+}
+
+header p{
+    text-align: center;
+    color: hsl(303, 10%, 53%);
+    margin: 0 25px 0 25px;
+}
+
+/* STARS */ 
+
+.stars{
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 18px;
+}
+
+.stars .stars__item{
+    border-radius: 14px;
+    min-width: 310px;
+    height: 80px;
+    background-color: hsl(300, 24%, 96%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    
+}
+
+
+
+
+
+/*TARJETAS */
+
+.card{
+    display: flex;
+    flex-direction: column;
+    margin: 15px auto;
+    gap: 18px;
+}
+
+.card .card__item{
+    background-color: hsl(300, 43%, 22%);
+    border-radius: 14px; 
+    width: 325px;
+    height: 250px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+
+.card__item img{
+    border-radius: 50%;
+    width: 45px;
+    grid-column: 1 / 2;
+    grid-row: 1/2;
+    margin-left: 30px;
+    margin-top: 40px;
+}
+
+.card__item .card__name{
+    grid-column: 2/3;
+    grid-row: 1/2;
+    margin-top: 40px;
+    color: white;
+}
+
+.card__item .card__status{
+    color: hsl(333, 80%, 67%);
+    grid-column: 2/3;
+    grid-row: 2/3;
+    margin-top: -20px;
+}
+
+.card__item .card__text{
+    grid-column: 1/4;
+    grid-row: 3/5;
+    margin: 0 33px;
+    color: hsl(0, 0%, 100%);
+    text-align: left;
+    line-height: 25px;
+    margin-top: -30px;
+} 
+
+@media only screen and (min-width: 1000px) {
+    body{
+        background: url(./images/bg-pattern-top-desktop.svg), url(./images/bg-pattern-bottom-desktop.svg);
+        background-position: top left, bottom right;
+        background-repeat: no-repeat;
+    }
+
+    .container{
+        display: grid;
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .header{
+        grid-column: 1/3;
+        grid-row: 1/2;
+        margin-left: 210px;
+        
+    }
+
+    header h1 {
+        margin: 117px 74px 0px 0px;
+        text-align: left;
+        color: hsl(300, 43%, 22%);
+        width: 330px;
+        height: 147px;
+        font-size: 37px;
+        
+        
+    }
+    
+    header p{
+        text-align: left;
+        color: hsl(303, 10%, 53%);
+        margin: 0 25px 0 0px;
+        width: 411px;
+        height: 65px;
+    }
+
+    .stars{
+        height: 200px;
+        width: 542px;
+        grid-row: 1/2;
+        grid-column: 2/4;
+        margin-left: 200px;
+    }
+
+    .stars .stars__item{
+        flex-direction: row;
+        width: 445px;
+        height: 55px;
+        justify-content: space-evenly;
+    }
+    .stars .stars__item1{
+        align-self: flex-start;
+    }
+
+    .stars .stars__item3{
+        align-self: flex-end;
+    }
+
+    .card{
+        flex-direction: row;
+        width: 1111px;
+        height: 226;
+        grid-row: 2/3;
+        grid-column: 1/4;
+    }
+
+    .card .card__item{
+        height: 234px;
+        width: 349px;
+    }
+
+    .card .card__item1{
+        margin-top: -18px;
+    }
+
+    .card .card__item3{
+        margin-top: 18px;
+    }
+
+    footer{
+        grid-row: 3/4;
+        grid-column: 2/3;
+    }
+}  
